@@ -1,0 +1,74 @@
+body {
+	background:#f8f8f8;
+	background:url('../images/tiles-01.png');
+	background-position: bottom;
+	background-repeat: none;
+	color: #274690;
+	font-family:'montserrat', arial;
+	text-align: center;
+	padding: 10%;
+}
+
+h1 {
+	text-transform: uppercase;
+	margin-bottom: 5%;
+	color: #E0479E;
+}
+
+h2 {
+	text-transform: capitalize;
+}
+
+h3 {
+	font-size: 30px;
+	text-transform: lowercase;
+}
+
+span {
+	color: #E0479E;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bolder;
+}
+
+li {
+	color: #61C9A8;
+	font-weight: bold;
+	font-size: 30px;
+	list-style: none;
+	padding: 20px;	
+}
+
+.btn {
+	background-color: #274690;
+	color: #FFFFFF;
+	margin-top: 2%;
+	padding: 1%;
+}
+
+.btn:hover {
+	background-color: #E0479E;
+	color: #FFFFFF;
+}
+
+#word_input {
+	color: #274690;
+	padding: 2%;
+	font-size: 20px;
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+}
+
+#title {
+	color: #274690;
+	text-transform: uppercase;
+	font-size: 40px;
+	text-decoration: underline;
+}
+
+.navbar {
+	padding-bottom: 10%;
+}

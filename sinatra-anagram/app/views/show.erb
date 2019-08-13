@@ -1,0 +1,13 @@
+<h1>Anagrams for <%= "#{@word}" %></h1>
+<ul class="anagrams">
+    <% if !@anagrams.nil? && @anagrams.length != 1 %>
+      <% @anagrams.each do |word| %>
+        <% if word.text != @word %>
+          <li><%= word.text %></li>
+        <% end %>
+      <% end %>
+    <% end %>
+    <% if @anagrams.length == 1 %>
+      <%= "That word doesn't haven't any anagrams." %> 
+    <% end %>
+</ul>

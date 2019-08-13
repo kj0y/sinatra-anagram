@@ -1,0 +1,46 @@
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://kit.fontawesome.com/90319c2626.js"></script>
+  <meta charset="utf-8">
+  <title>Anagrams Generator</title>
+</head>
+
+
+<h1>Words</h1>
+  <table class="table table-striped">
+    <thead>
+      <th>Text</th>
+      <th>Letters</th>   
+      <th>Edit</th> 
+    </thead>
+    <tbody>
+    <% @words.each do |word| %>
+      <tr>
+        <td>
+          <a href="<%= "/words/#{word.id}" %>">
+            <%= "#{word.text}" %>
+          </a>
+        </td>
+
+        <td>
+          <%= word.letters %>
+        </td>
+
+        <td>
+          <a href="<%= "/words/#{word.id}/edit" %>">Edit</a>
+        </td>
+
+        <td>
+          <form action="<%= "/words/#{word.id}" %>" method="post">
+            <input type="hidden" name="_method" value="Delete" />
+              <button class="btn btn-danger" type="submit">
+                <i class="far fa-trash-alt"></i> Delete
+              </button>
+          </form>
+        </td>
+    </tr>
+  <% end %>
+ </tbody>
+</table>
